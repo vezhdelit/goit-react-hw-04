@@ -81,11 +81,7 @@ function App() {
         image={selectedImage}
         onRequestClose={() => close()}
       />
-      {errorMessage && (
-        <div>
-          <ErrorMessage errorMessage={errorMessage} />
-        </div>
-      )}
+      {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
       {!isLoading && totalPages > page && <LoadMoreBtn setPage={setPage} />}
       {isLoading && <Loader />}
     </>
